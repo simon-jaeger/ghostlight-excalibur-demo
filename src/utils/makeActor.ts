@@ -1,7 +1,7 @@
 import {Actor, Canvas, CollisionType, Vector} from "excalibur"
 import {makeGraphics} from "/src/utils/makeGraphics"
 
-export function makeActor(data: glActor, Type: undefined | typeof Actor, assets: Map<string, HTMLImageElement>) {
+export function makeActor(data: glScene["actors"][number], Type: undefined | typeof Actor, assets: Map<string, HTMLImageElement>) {
   const {x, y, width, height} = data
   const img = assets.get(data.texture)
   let graphics: Canvas
